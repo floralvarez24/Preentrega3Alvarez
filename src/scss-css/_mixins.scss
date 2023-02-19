@@ -1,0 +1,14 @@
+@mixin flex($display,$direction){
+    display: $display;
+    flex-direction: $direction;
+}
+
+@mixin sizes($width,$height){
+    width: $width;
+    height: $height;
+}
+
+@mixin alineado($justify,$align){
+    justify-content: $justify;
+    align-items: $align;
+}

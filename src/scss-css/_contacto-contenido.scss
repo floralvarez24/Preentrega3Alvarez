@@ -1,0 +1,52 @@
+@import "variables";
+.formulario{
+    width: 500px;
+     margin: auto;
+     background: rgba(0,0,0,0.4);
+     padding: 10px 20px;
+     box-sizing: border-box;
+     border-radius: 7px;
+     margin-bottom: 50px;
+     margin-top: 120px;
+     -webkit-box-shadow: 5px 5px 16px 5px #000000; 
+     box-shadow: 5px 5px 16px 5px #000000;
+     input, textarea{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 14px;
+        border: none;
+        font-family: $fuentePrincipal;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+    textarea{
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%;
+    }
+    label{
+        font-size: 17px;
+        color: white;
+        font-family: $fuentePrincipal; 
+    }
+    #boton{
+        background-image: linear-gradient(to left, #615744 0, #60513c 10%, #5f4b35 20%, #5d432d 30%, #5b3b26 40%, #59321f 50%, #572819 60%, #541f16 70%, #521514 80%, #500913 90%, #4d0015 100%);
+        color: white;
+        width: 50px;
+        font-size: 14px;
+        padding-right: 60px;
+        border-radius: 10px;
+        transition: 0.6s;
+        &:hover{
+            cursor: pointer;
+            background-image: linear-gradient(to right, #615744 0, #60513c 10%, #5f4b35 20%, #5d432d 30%, #5b3b26 40%, #59321f 50%, #572819 60%, #541f16 70%, #521514 80%, #500913 90%, #4d0015 100%); 
+        }
+    }
+    @media (max-width:650px){
+        width: 80vw;  
+    }
+ }
+
+ 

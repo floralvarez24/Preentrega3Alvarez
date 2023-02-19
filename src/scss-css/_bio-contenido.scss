@@ -1,0 +1,52 @@
+@import "variables";
+.bio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: $fuentePrincipal;
+    font-size: 16px;
+    color: rgb(65, 62, 62);
+    margin: 120px 150px 10px 150px;
+    line-height: 20px;
+    span{
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+    }   
+    @for $var from 1 through 12 {
+        @if $var == 1 or $var == 6 or $var == 7 or $var == 4 or $var == 5 or $var == 8 or $var == 11 or $var == 12{
+            .bio-item:nth-child(#{$var}){
+                grid-column-start: span 4; 
+            }
+    
+        }
+        @else if $var == 2 or $var == 10{
+            .bio-item:nth-child(#{$var}){
+                grid-column-start: span 3; 
+            }
+        }
+        @else{
+            .bio-item:nth-child(#{$var}){
+                grid-column-start: span 1; 
+            } 
+        }
+    }
+    .p_ppal{
+        @media (max-width:800px){
+            text-align:center;    
+        }  
+    }
+    #foto{
+        @media (max-width:800px){
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;    
+        }  
+    }
+    @media (max-width:800px){
+        display: block;
+        margin: 110px 10px 10px 10px;
+        text-align:justify;
+    }       
+}
+

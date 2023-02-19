@@ -1,0 +1,64 @@
+@import "variables";
+@import "mixins";
+main{
+    .contenedor_discografia{
+        @include flex(flex,row);
+        margin-top: 120px;
+        flex-wrap: wrap;
+        justify-content:center;  
+        h2{
+            font-family: $fuentePrincipal;
+            font-weight: 600;
+            font-size: 18px;     
+        }
+        .mientras_llueve,.como_siempre{
+            @include flex(flex,column); 
+            @include alineado(center,center);   
+            text-align: center;
+            width: 350px; 
+            .tapa_mientras_llueve, .tapa_como_siempre{
+                width: 300px;
+            }
+            .sp_mientras_llueve, .sp_como_siempre{
+                @media (max-width:650px){
+                    @include sizes(100vw,380px); 
+                }
+            }
+        }
+        .como_siempre{
+            @media (max-width:650px){
+                margin-top: 10px;  
+            } 
+        }
+    }
+    .singles{
+        font-family: $fuentePrincipal;
+        font-weight: 600;
+        font-size: 18px;  
+        margin-left: 180px; 
+        @media (max-width:650px){
+            margin-left: 20px;    
+        }
+    }
+    .contenedor_singles{
+        @include flex(flex,row);
+        @include alineado(center,center);   
+        margin: auto;
+        margin-top: 10px;
+        flex-wrap: wrap; 
+        margin-bottom: 10px;
+        .barrio , .siembra, .a_la_uruguaya, .donde_siempre{
+            @include flex(flex,column);
+            @include alineado(center,center);   
+            width: 350px;
+            @media (max-width:650px){
+                @include sizes(100vw,120px); 
+            }
+        }
+        @media (max-width:650px){
+            margin-bottom: 20px;  
+        }
+    } 
+}
+
+
